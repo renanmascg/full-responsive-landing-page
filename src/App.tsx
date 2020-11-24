@@ -1,14 +1,14 @@
 import React from 'react';
-import Navbar from './components/Navbar';
 import { BrowserRouter } from 'react-router-dom';
-
+import HomePage from './pages';
 import GlobalStyle from './styles/global';
+
 
 function App() {
   return (
     <>
       <BrowserRouter>
-        <Navbar />
+        <HomePage />
       </BrowserRouter>    
       <GlobalStyle />
     </>
