@@ -39,6 +39,23 @@ Instead, it will copy all the configuration files and the transitive dependencie
 
 You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
 
+# Learned at this project
+
+## Web fonts to video and images
+
+- Pexels ( to get free images and videos for your website )
+
+## Import video assets to your react typescript project
+
+To make typescript know about video files, you `should declare to react-app-end.d .ts` this kind of file ! otherwise typescript will return error indicating it can't find the types for this file ( in this case *.mp4).
+
+```
+declare module '*.mp4' {
+  const src: string;
+  export default src;
+}
+```
+
 ## Learn More
 
 You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
