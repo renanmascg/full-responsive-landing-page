@@ -1,3 +1,6 @@
+import Img1 from '../../images/svg-1.svg';
+
+
 export const homeObjOne = {
   id: "about",
   lightBg: false,
@@ -8,7 +11,7 @@ export const homeObjOne = {
   description: 'Get Access to our exclusive app that allow youto send unlimited transactions without getting charged any fees',
   buttonLabel: "Get Started",
   imgStart: false,
-  img: require('../../images/svg-1.svg'),
+  img: Img1,
   altTag: 'car',
   dark: true,
   primary: true,
