@@ -3,7 +3,7 @@ import Sidebar from '../components/Sidebar';
 import Navbar from '../components/Navbar';
 import HeroSection from '../components/HeroSection';
 import InfoSection from '../components/InfoSection';
-import { homeObjOne } from '../components/InfoSection/Data';
+import { homeObjOne, homeObjThree, homeObjTwo } from '../components/InfoSection/Data';
 
 
 const HomePage: React.FC = () => {
@@ -20,6 +20,8 @@ const HomePage: React.FC = () => {
       <Navbar toggle={toggle}/>
       <HeroSection />
       <InfoSection obj={homeObjOne}/>
+      <InfoSection obj={homeObjTwo}/>
+      <InfoSection obj={homeObjThree}/>
     </>
   );
 }

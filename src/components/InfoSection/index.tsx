@@ -19,7 +19,7 @@ const InfoSection: React.FC<IInfoSection> = ({ obj }) => {
               <TextWrapper>
                 <TopLine>{obj.topLine}</TopLine>
                 <Heading lightText={obj.lightText}>{ obj.headline}</Heading>
-                <Subtitle darkText={obj.darkText}>{ obj.description}</Subtitle>
+                <Subtitle darkText={obj.lightTextDes}>{ obj.description}</Subtitle>
                 <BtnWrap>
                   <Button 
                     to="home"  
