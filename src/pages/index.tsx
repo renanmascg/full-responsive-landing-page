@@ -5,6 +5,7 @@ import HeroSection from '../components/HeroSection';
 import InfoSection from '../components/InfoSection';
 import { homeObjOne, homeObjThree, homeObjTwo } from '../components/InfoSection/Data';
 import Services from '../components/Services';
+import Footer from '../components/Footer';
 
 
 const HomePage: React.FC = () => {
@@ -24,6 +25,7 @@ const HomePage: React.FC = () => {
       <InfoSection obj={homeObjTwo}/>
       <Services />
       <InfoSection obj={homeObjThree}/>
+      <Footer />
     </>
   );
 }
