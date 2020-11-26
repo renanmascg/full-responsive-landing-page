@@ -37,6 +37,7 @@ const Navbar: React.FC<NavProps> = ({ toggle }) => {
                 duration={500}
                 spy={true}
                 activeClass="active"
+                offset={-80}
                 // offset={-80}
                 >About</NavLinks>
             </NavItem>
@@ -45,6 +46,7 @@ const Navbar: React.FC<NavProps> = ({ toggle }) => {
               smooth={true}
               duration={500}
               activeClass="active"
+              offset={-80}
               spy={true}>Discover</NavLinks>
             </NavItem>
             <NavItem>
@@ -53,6 +55,7 @@ const Navbar: React.FC<NavProps> = ({ toggle }) => {
                 smooth={true}
               duration={500}
               spy={true}
+              offset={-80}
               activeClass="active"
                 >Services</NavLinks>
             </NavItem>
@@ -62,6 +65,7 @@ const Navbar: React.FC<NavProps> = ({ toggle }) => {
                 smooth={true}
                 duration={500}
                 spy={true}
+                offset={-80}
                 activeClass="active"
                 >Sign Up</NavLinks>
             </NavItem>
