@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { FaBars } from 'react-icons/fa';
 import { MobileIcon, Nav, NavbarContainer, NavBtn, NavBtnLink, NavItem, NavLinks, NavLogo, NavMenu } from './NavbarElement';
 
@@ -7,9 +7,23 @@ interface NavProps {
 }
 
 const Navbar: React.FC<NavProps> = ({ toggle }) => {
+  const [scrollNav, setScrollNav] = useState<boolean>(false);
+
+  const changeNav = () => {
+    if (window.scrollY >= 80) {
+      setScrollNav(true);
+    } else {
+      setScrollNav(false);
+    }
+  }
+
+  useEffect(() => {
+    window.addEventListener('scroll', changeNav);
+  }, [])
+
   return (
     <>
-      <Nav>
+      <Nav scrollNav={scrollNav}>
         <NavbarContainer>
           <NavLogo to="">dollar</NavLogo>
           <MobileIcon onClick={toggle}>
@@ -17,16 +31,39 @@ const Navbar: React.FC<NavProps> = ({ toggle }) => {
           </MobileIcon>
           <NavMenu>
             <NavItem>
-              <NavLinks to="about">About</NavLinks>
+              <NavLinks 
+                to="about"
+                smooth={true}
+                duration={500}
+                spy={true}
+                activeClass="active"
+                // offset={-80}
+                >About</NavLinks>
             </NavItem>
             <NavItem>
-              <NavLinks to="discover">Discover</NavLinks>
+              <NavLinks to="discover"
+              smooth={true}
+              duration={500}
+              activeClass="active"
+              spy={true}>Discover</NavLinks>
             </NavItem>
             <NavItem>
-              <NavLinks to="services">Services</NavLinks>
+              <NavLinks 
+                to="services"
+                smooth={true}
+              duration={500}
+              spy={true}
+              activeClass="active"
+                >Services</NavLinks>
             </NavItem>
             <NavItem>
-              <NavLinks to="signup">Sign Up</NavLinks>
+              <NavLinks 
+                to="signup"
+                smooth={true}
+                duration={500}
+                spy={true}
+                activeClass="active"
+                >Sign Up</NavLinks>
             </NavItem>
           </NavMenu>
           <NavBtn>

@@ -23,7 +23,17 @@ const HeroSection: React.FC = () => {
           next payment.  
         </HeroP>
         <HeroBtnWrapper>
-          <Button to="signup" primary={true} dark={true} onMouseEnter={onHover} onMouseLeave={onHover}>
+          <Button 
+            to="signup" 
+            primary={true} 
+            dark={true} 
+            onMouseEnter={onHover} 
+            onMouseLeave={onHover}
+            smooth={true}
+            duration={500}
+            activeClass="active"
+            spy={true}
+            >
             Get Started {hover? <ArrowForward /> : <ArrowRight />}
           </Button>
         </HeroBtnWrapper>
